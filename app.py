@@ -198,4 +198,6 @@ with gr.Blocks(css=custom_css) as app:
     transcribe_btn.click(fn=transcribe_audio, inputs=audio_input, outputs=transcript_output)
     query_btn.click(fn=answer_question, inputs=question_input, outputs=answer_output)
 
-app.launch()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 7860))
+    app.launch(server_name="0.0.0.0", server_port=port)
