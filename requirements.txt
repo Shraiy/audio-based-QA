@@ -1,0 +1,8 @@
+whisper
+gradio
+sentence-transformers
+transformers
+faiss-cpu
+nltk
+numpy
+torch
